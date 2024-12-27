@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Video to Blog Converter </title>
+    <title>AI Video to Blog Generator </title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="flex flex-col min-h-screen bg-gray-100 font-sans antialised">
     <nav class="bg-gray-600  p-4 text-black flex justify-between">
         <div>
-            <h1 class="text-3xl font-bold px-8">AI Video to Blog Generator</h1>
+            <h1 class="text-3xl font-bold px-8">AI Blog Generator</h1>
         </div>
         <div class="text-center px-8 flex space-x-4">
             <a href="#">Create Account</a>
@@ -25,6 +25,18 @@
                 <h2 class="text-2xl font-semibold m-2">Welcome To My Blog Generator App</h2>
                 <P class="text-gray-700">Create Blog articles with AI from youtube video links</P>
             </div>
+            
+            <br>
+
+            <!-- Youtube link section -->
+             <div>
+                <h2 class="text-center text-xl mb-4 font-semibold">Enter the Youtube Video link </h2>
+                <div class="flex space-x-4">
+                    <input id="yt-link" type="url" placeholder="Paste your link here" class="flex-grow p-2 border border-gray-400 rounded-l-md">
+                    <button id="Generate-btn" class="bg-gray-600 text-white px-4 py-2 rounded-r-md hover:bg-gray-700 transition-colors">Generate</button>
+                </div>
+             </div>
+
         </div>
      </div>
     
