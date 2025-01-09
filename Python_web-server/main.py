@@ -6,4 +6,8 @@ server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) #UDP protocol (
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 # Binding socket to server(ip adress and port)
-server_socket.bind((0.0.0.0))
+server_socket.bind((0.0.0.0, 8080)) # Acess from any machine
+
+# Listening to requests
+server_socket.listen(5)# maximum number of connections on queue
+print("Listening on port 8080")
