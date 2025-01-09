@@ -14,4 +14,4 @@ server_socket.bind((HOST_SERVER, HOST_PORT)) # Acess from any machine
 
 # Listening to requests
 server_socket.listen(5)# maximum number of connections on queue
-print("Listening on port 8080")
+print(f"Listening on port {HOST_SERVER}...")
