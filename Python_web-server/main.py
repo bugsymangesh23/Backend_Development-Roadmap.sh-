@@ -15,3 +15,8 @@ server_socket.bind((HOST_SERVER, HOST_PORT)) # Acess from any machine
 # Listening to requests
 server_socket.listen(5)# maximum number of connections on queue
 print(f"Listening on port {HOST_SERVER}...")
+
+# Accepting connection requets(blocking and non-blocking)
+client_socket, client_address = server_socket.accept()
+print(client_address)
+print(client_socket)
