@@ -18,4 +18,3 @@ Understand the socket module.
 2. Client and Server
 3. Http
 4. 3-way handshake
-
