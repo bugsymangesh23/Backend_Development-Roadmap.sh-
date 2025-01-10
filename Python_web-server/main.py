@@ -16,13 +16,14 @@ server_socket.bind((HOST_SERVER, HOST_PORT)) # Acess from any machine
 # Listening to requests
 server_socket.listen(5)# maximum number of connections on queue
 
-print(f"Listening on port {HOST_SERVER}...")
-
-try:
-# Accepting connection requets(blocking and non-blocking)
-    client_socket, client_address = server_socket.accept()
-    print(client_address)
-    print(client_socket)
-except:
-    time.sleep(1)
-    print("Error loading page")
+print(f"Listening on port {HOST_PORT}...")
+# Infinite loop to prevent error loading
+while True:
+    try:
+    # Accepting connection requets(blocking and non-blocking)
+        client_socket, client_address = server_socket.accept()
+        print(client_address)
+        print(client_socket)
+    except:
+        time.sleep(1)
+        print("Error loading page")
