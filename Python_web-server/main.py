@@ -43,7 +43,7 @@ while True:
             # message-body
             response = 'HTTP/1.1 200 OK \n\n' + content
     else:
-        response = 'HTTP/1.1 405 Method Not Allowed\n\n'
+        response = 'HTTP/1.1 405 Method Not Allowed\n\nAllow: GET'
          # send response to client
         client_socket.sendall(response.encode())
         client_socket.close()
