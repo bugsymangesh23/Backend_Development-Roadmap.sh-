@@ -30,17 +30,20 @@ while True:
     http_methods = first_header_components[0]
     path = first_header_components[1]
 
+    # handle all the http http_methods
+    if http_methods == 'GET':
     # Check path
-    if path == '/':
-        file_input = open('index.html')
-        content = file_input.read()
-        file_input.close()
+        if path == '/':
+            file_input = open('index.html')
+            content = file_input.read()
+            file_input.close()
 
-        # HTTP RESPONSE
-        # headers
-        # message-body
-        response = 'HTTP/1.1 200 OK \n\n' + content
-
-        # send response to client
+            # HTTP RESPONSE
+            # headers
+            # message-body
+            response = 'HTTP/1.1 200 OK \n\n' + content
+    else:
+        response = 'HTTP/1.1 405 Method Not Allowed\n\n'
+         # send response to client
         client_socket.sendall(response.encode())
-        client_socket.close
+        client_socket.close()
