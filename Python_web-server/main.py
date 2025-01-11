@@ -25,3 +25,7 @@ while True:
     request = client_socket.recv(1500).decode() #get user requests
     print(request)
     headers = request.split("\n") # Split request with a new line
+    first_header_components = headers[0].split()
+
+    http_methods = first_header_components[0]
+    path = first_header_components[1]
