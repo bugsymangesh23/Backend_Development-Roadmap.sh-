@@ -33,7 +33,7 @@ while True:
     # Check path
     if path == '/':
         file_input = open('index.html')
-        content = file_input.read.read()
+        content = file_input.read()
         file_input.close()
 
         # HTTP RESPONSE
@@ -42,5 +42,5 @@ while True:
         response = 'HTTP/1.1 200 OK \n\n' + content
 
         # send response to client
-        client_socket.sendall(response.encode)
+        client_socket.sendall(response.encode())
         client_socket.close
