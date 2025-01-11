@@ -23,3 +23,5 @@ while True:
     # Accepting connection requets(blocking and non-blocking)
     client_socket, client_address = server_socket.accept()
     request = client_socket.recv(1500).decode() #get user requests
+    print(request)
+    headers = request.split("\n") # Split request with a new line
