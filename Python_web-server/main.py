@@ -29,3 +29,12 @@ while True:
 
     http_methods = first_header_components[0]
     path = first_header_components[1]
+
+    # Check path
+    if path == '/':
+        file_input = open('index.html')
+        content = file_input.read.read()
+        file_input.close()
+
+        # HTTP RESPONSE
+        response = 'HTTP/1.1 200 OK \n\n' + content
