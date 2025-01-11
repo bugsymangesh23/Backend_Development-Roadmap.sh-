@@ -37,4 +37,10 @@ while True:
         file_input.close()
 
         # HTTP RESPONSE
+        # headers
+        # message-body
         response = 'HTTP/1.1 200 OK \n\n' + content
+
+        # send response to client
+        client_socket.sendall(response.encode)
+        client_socket.close
